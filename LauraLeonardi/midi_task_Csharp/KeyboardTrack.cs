@@ -6,10 +6,10 @@ namespace midi_task_Csharp
 {
 	public class KeyboardTrack : ParsedTrack
 	{
-		public Instrument Instrument { get; }
+		public InstrumentType Instrument { get; }
 		public Dictionary<int, long> NotesMaxDuration { get; }
 
-		public KeyboardTrack(Instrument instrument, List<AbstractNote> notes, int channel) : base(notes, channel)
+		public KeyboardTrack(InstrumentType instrument, List<AbstractNote> notes, int channel) : base(notes, channel)
 		{
 			Instrument = instrument;
 			NotesMaxDuration = CalcMaxDuration();
