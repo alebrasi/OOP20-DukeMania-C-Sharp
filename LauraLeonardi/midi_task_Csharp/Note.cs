@@ -15,7 +15,9 @@ namespace midi_task_Csharp
 			Frequency = (double)Math.Pow(2, (double)(identifier - NUM_A4) / NUM_NOTE) * FREQ_A4;
 		}
 		public Note(long startTime, int identifier) : this(DEFAULT_DURATION, startTime, identifier) { }
-		public int GetItem()
+
+		///this method returns an integer representing the note identifier.
+		public override object GetItem()
 		{
 			return Identifier;
 		}

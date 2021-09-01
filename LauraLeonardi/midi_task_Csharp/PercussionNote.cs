@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace midi_task_Csharp
 {
-	public class PercussionNote : Note
+	public class PercussionNote : AbstractNote
 	{
         private const int OFFSET = 35;
         public Percussion Instrument { get; }
@@ -16,12 +16,12 @@ namespace midi_task_Csharp
 		{
 			Instrument = (Percussion)Enum.Parse(typeof(Percussion), Convert.ToString(identifier - OFFSET));
 		}
-        
 
-        ///this method returns the Percussion associated to the note.
-        public Percussion GetItem()
-            {
-                return Instrument;
-            }
-    }
+
+		///this method returns the Percussion associated to the note.
+		public override object GetItem()
+		{
+			return Instrument;
+		}
+	}
 }
