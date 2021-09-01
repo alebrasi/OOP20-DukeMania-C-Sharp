@@ -1,0 +1,6 @@
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\obj\Debug\midi_task_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\bin\Debug\OOP_task.exe.config
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\bin\Debug\OOP_task.exe
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\bin\Debug\OOP_task.pdb
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\obj\Debug\OOP_task.exe
+C:\Users\Laura\Desktop\OOP_task_C#\prova_OOP\OOP_task\obj\Debug\OOP_task.pdb
