@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskCsharpSofiaTosi", "taskCsharpSofiaTosi\taskCsharpSofiaTosi.csproj", "{12D08963-9949-4EFF-B9A1-9FA331BFEE97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{16A3844A-6BCF-4455-B380-AFFBA5104259}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12D08963-9949-4EFF-B9A1-9FA331BFEE97} = {12D08963-9949-4EFF-B9A1-9FA331BFEE97}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12D08963-9949-4EFF-B9A1-9FA331BFEE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D08963-9949-4EFF-B9A1-9FA331BFEE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D08963-9949-4EFF-B9A1-9FA331BFEE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D08963-9949-4EFF-B9A1-9FA331BFEE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A3844A-6BCF-4455-B380-AFFBA5104259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A3844A-6BCF-4455-B380-AFFBA5104259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A3844A-6BCF-4455-B380-AFFBA5104259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A3844A-6BCF-4455-B380-AFFBA5104259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {716755D7-C93E-4D64-AE08-F5E59B91E8AA}
+	EndGlobalSection
+EndGlobal
