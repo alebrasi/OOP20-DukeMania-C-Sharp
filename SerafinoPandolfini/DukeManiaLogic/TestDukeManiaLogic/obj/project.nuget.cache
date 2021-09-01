@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vx9Tx0Jy5wyvKfWOqNH5m0j6aFeUm/+id6v1rZ8gJ16KZQB9QJhYAFmzk4PgAdq8/1XOnmUywBffq7aXNW3xUQ==",
+  "dgSpecHash": "Fc5vWDml2JlknWXum8+uuCgDJ4cGlDcEyVdO/GEh96ZAOTQ3NKzM+UYJTiSHD7iM2GL1mNjhFLUduW3HHCPJAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
+  "projectFilePath": "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UTENTE\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\UTENTE\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
