@@ -10,7 +10,6 @@ namespace midi_task_Csharp
 		public string Name { get; }
 		public List<InstrumentType> AssociatedInstrumentType { get; }
 
-
 		public Instrument(InstrumentType instrument)
 		{
 			InstrumentName = instrument;

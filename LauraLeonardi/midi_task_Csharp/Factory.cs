@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace midi_task_Csharp
 {
-	class Factory : IAbstractFactory
+	public class Factory : IAbstractFactory
 	{
 		private static Factory instance;
 

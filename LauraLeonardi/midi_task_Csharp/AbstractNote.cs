@@ -8,7 +8,6 @@ namespace midi_task_Csharp
 {
 	public abstract class AbstractNote
 	{
-		private const int DEFAULT_DURATION = 0;
 		public long StartTime { get; }
 		public int Identifier { get; }
 		public long Duration { get; }
@@ -20,7 +19,6 @@ namespace midi_task_Csharp
 			StartTime = startTime;
 			Identifier = identifier;
         }
-		public AbstractNote(long startTime, int identifier) : this(DEFAULT_DURATION, startTime, identifier) { }
 
 		/// this method depends on the type of the note and can return a percussion (for PercussonNote)
 		/// or an integer representing the note identifier (for Note).

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace midi_task_Csharp
 {
-	interface IAbstractFactory
+	public interface IAbstractFactory
 	{
 		///this method create a new note.
 		AbstractNote CreateNote(long duration, long startTime, int identifier);

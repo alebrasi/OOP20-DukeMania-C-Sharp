@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace midi_task_Csharp
 {
-	class PercussionFactory : IAbstractFactory
+	public class PercussionFactory : IAbstractFactory
 	{
 		private static PercussionFactory instance;
 		private const int MIN = 35;

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace midi_task_Csharp
 {
 	[Serializable]
-	internal class InvalidNoteException : Exception
+	public class InvalidNoteException : Exception
 	{
 		public InvalidNoteException()
 		{
