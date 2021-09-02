@@ -6134,11 +6134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
+      "projectUniqueName": "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
       "projectName": "TestDukeManiaLogic",
-      "projectPath": "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
+      "projectPath": "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\TestDukeManiaLogic\\TestDukeManiaLogic.csproj",
       "packagesPath": "C:\\Users\\UTENTE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\TestDukeManiaLogic\\obj\\",
+      "outputPath": "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\TestDukeManiaLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UTENTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6155,8 +6155,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\DukeManiaLogic\\DukeManiaLogic.csproj": {
-              "projectPath": "C:\\Users\\UTENTE\\Desktop\\DukeManiaLogic\\DukeManiaLogic\\DukeManiaLogic.csproj"
+            "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\DukeManiaLogic\\DukeManiaLogic.csproj": {
+              "projectPath": "C:\\Users\\UTENTE\\Desktop\\C#\\OOP20-DukeMania-C-Sharp\\SerafinoPandolfini\\DukeManiaLogic\\DukeManiaLogic\\DukeManiaLogic.csproj"
             }
           }
         }

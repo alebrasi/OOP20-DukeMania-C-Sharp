@@ -97,6 +97,10 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+DukeManiaLogic/bin/
+TestDukeManiaLogic/bin/
+DukeManiaLogic/obj/
+TestDukeManiaLogic/obj/
 
 # Chutzpah Test files
 _Chutzpah*
