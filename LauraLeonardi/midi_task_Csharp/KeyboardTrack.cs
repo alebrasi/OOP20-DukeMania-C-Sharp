@@ -6,7 +6,7 @@ namespace midi_task_Csharp
 {
 	public class KeyboardTrack : ParsedTrack
 	{
-		public InstrumentType Instrument { get; }
+		public InstrumentType Instrument { get; set; }
 		public Dictionary<int, long> NotesMaxDuration { get; }
 
 		public KeyboardTrack(InstrumentType instrument, List<AbstractNote> notes, int channel) : base(notes, channel)
@@ -19,5 +19,6 @@ namespace midi_task_Csharp
 		{
 			return Notes.GroupBy(n => n.Identifier).Select(n => n.OrderByDescending(d => d.Duration).FirstOrDefault()).ToDictionary(n => n.Identifier, n => n.Duration);
 		}
+
 	}
 }

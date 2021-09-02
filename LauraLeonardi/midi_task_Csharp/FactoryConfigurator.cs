@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace midi_task_Csharp
 {
-	class FactoryConfigurator
+	public class FactoryConfigurator
 	{
+		private FactoryConfigurator() { }
 		///this method return a FactoryImpl or PercussionFactoryImpl based on the channel.
 		public static IAbstractFactory GetFactory(int channel)
 		{

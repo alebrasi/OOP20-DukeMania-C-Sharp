@@ -7,7 +7,6 @@ namespace midi_task_Csharp
 		private const int NUM_A4 = 69;
 		private const int NUM_NOTE = 12;
 		private const double FREQ_A4 = 440;
-		private const int DEFAULT_DURATION = 0;
 		public double Frequency { get; }
 
 		public Note(long duration, long startTime, int identifier) : base(duration, startTime, identifier)
