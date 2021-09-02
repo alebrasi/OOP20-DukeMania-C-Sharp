@@ -6,10 +6,10 @@ namespace midi_task_Csharp
 	{
 		public string Title { get; }
 		public double Duration { get; }
-		public List<KeyboardTrack> Tracks { get; }
+		public List<ParsedTrack> Tracks { get; }
 		public double Bpm { get; }
 		///this is the constructor
-		public Song(string title, double duration, List<KeyboardTrack> tracks, double bpm)
+		public Song(string title, double duration, List<ParsedTrack> tracks, double bpm)
 		{
 			Title = title;
 			Duration = duration;
