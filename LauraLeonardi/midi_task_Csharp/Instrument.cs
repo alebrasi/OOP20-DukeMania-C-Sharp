@@ -20,15 +20,14 @@ namespace midi_task_Csharp
 		private List<InstrumentType> CalcAssociatedInstrumentType()
 		{
 			return Enum.GetValues(typeof(InstrumentType))
-						.Cast<Instrument>()
-						.Where(x => x.CalcName().Equals(Name))
 						.Cast<InstrumentType>()
+						.Where(e => ((int)e)/8 == ((int)InstrumentName)/8)
 						.ToList();
 		}
 
 		private string CalcName()
 		{
-			switch ((int)InstrumentName / 9)
+			switch ((int)InstrumentName / 8)
 			{
 				case 0:
 					return "Piano";
