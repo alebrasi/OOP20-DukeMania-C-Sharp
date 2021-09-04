@@ -20,12 +20,12 @@ namespace TaskCSharp
             externalMappingFunction = path => new File1(path);
         }
 
-        public IStorage getConfigurationStorage()
+        public IStorage GetConfigurationStorage()
         {
             return new Storage(configurationMappingFunction);
         }
 
-        public IStorage getExternalStorage()
+        public IStorage GetExternalStorage()
         {
             return new Storage(externalMappingFunction);
         }
@@ -38,7 +38,7 @@ namespace TaskCSharp
                 this.fileMappingFunction = fileMappingFunction;
             }
 
-            public bool createDirectoryRecursively(string path)
+            public bool CreateDirectoryRecursively(string path)
             {
                 if (!Directory.CreateDirectory(fileMappingFunction(path).Path).Exists) 
                 {
@@ -48,32 +48,32 @@ namespace TaskCSharp
                 return false;
             }
 
-            public bool createFileIfNotExists(string path)
+            public bool CreateFileIfNotExists(string path)
             {
                 if (!File.Exists(fileMappingFunction(path).Path)) 
                 {
-                    File.Create(fileMappingFunction(path).Path);
+                    File.Create(fileMappingFunction(path).Path).Close();
                     return true; 
                 }
                 return false;
             }
 
-            public File1 getAsFile(string path)
+            public File1 GetAsFile(string path)
             {
                 return fileMappingFunction(path);
             }
 
-            public byte[] readFileAsByte(string filePath)
+            public byte[] ReadFileAsByte(string filePath)
             {
                 return File.ReadAllBytes(fileMappingFunction(filePath).Path);
             }
 
-            public string readFileAsString(string filePath)
+            public string ReadFileAsString(string filePath)
             {
                 return File.ReadAllText(fileMappingFunction(filePath).Path);
             }
 
-            public void writeStringOnFile(string filePath, string content)
+            public void WriteStringOnFile(string filePath, string content)
             {
                 File.WriteAllText(fileMappingFunction(filePath).Path, content);
             }

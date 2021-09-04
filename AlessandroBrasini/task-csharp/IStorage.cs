@@ -4,11 +4,11 @@ namespace TaskCSharp
 {
     public interface IStorage 
     {
-        void writeStringOnFile(String filePath, String content);
-        String readFileAsString(String filePath);
-        byte[] readFileAsByte(String filePath);
-        bool createDirectoryRecursively(String path);
-        bool createFileIfNotExists(String path);
-        File1 getAsFile(String path);
+        void WriteStringOnFile(String filePath, String content);
+        String ReadFileAsString(String filePath);
+        byte[] ReadFileAsByte(String filePath);
+        bool CreateDirectoryRecursively(String path);
+        bool CreateFileIfNotExists(String path);
+        File1 GetAsFile(String path);
     }
 }
