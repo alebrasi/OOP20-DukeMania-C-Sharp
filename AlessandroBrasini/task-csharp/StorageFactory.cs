@@ -32,17 +32,17 @@ namespace TaskCSharp
 
         private class Storage : IStorage
         {
-            private Func<String, File1> fileMappingFunction;
-            public Storage(Func<String, File1> fileMappingFunction) 
+            private Func<String, File1> _fileMappingFunction;
+            public Storage(Func<String, File1> _fileMappingFunction) 
             {
-                this.fileMappingFunction = fileMappingFunction;
+                this._fileMappingFunction = _fileMappingFunction;
             }
 
             public bool CreateDirectoryRecursively(string path)
             {
-                if (!Directory.CreateDirectory(fileMappingFunction(path).Path).Exists) 
+                if (!Directory.CreateDirectory(_fileMappingFunction(path).Path).Exists) 
                 {
-                    Directory.CreateDirectory(fileMappingFunction(path).Path);
+                    Directory.CreateDirectory(_fileMappingFunction(path).Path);
                     return true;
                 }
                 return false;
@@ -50,9 +50,9 @@ namespace TaskCSharp
 
             public bool CreateFileIfNotExists(string path)
             {
-                if (!File.Exists(fileMappingFunction(path).Path)) 
+                if (!File.Exists(_fileMappingFunction(path).Path)) 
                 {
-                    File.Create(fileMappingFunction(path).Path).Close();
+                    File.Create(_fileMappingFunction(path).Path).Close();
                     return true; 
                 }
                 return false;
@@ -60,22 +60,22 @@ namespace TaskCSharp
 
             public File1 GetAsFile(string path)
             {
-                return fileMappingFunction(path);
+                return _fileMappingFunction(path);
             }
 
             public byte[] ReadFileAsByte(string filePath)
             {
-                return File.ReadAllBytes(fileMappingFunction(filePath).Path);
+                return File.ReadAllBytes(_fileMappingFunction(filePath).Path);
             }
 
             public string ReadFileAsString(string filePath)
             {
-                return File.ReadAllText(fileMappingFunction(filePath).Path);
+                return File.ReadAllText(_fileMappingFunction(filePath).Path);
             }
 
             public void WriteStringOnFile(string filePath, string content)
             {
-                File.WriteAllText(fileMappingFunction(filePath).Path, content);
+                File.WriteAllText(_fileMappingFunction(filePath).Path, content);
             }
         }
     }

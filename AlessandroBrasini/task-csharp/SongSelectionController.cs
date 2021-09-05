@@ -6,8 +6,8 @@ namespace TaskCSharp
 {
     public class SongSelectionWindowController : ISongSelectionWindowController
     {
-        private SongInfo currentSong;
-        private List<SongInfo> songsConfigurations;
+        private SongInfo _currentSong;
+        private List<SongInfo> _songsConfigurations;
 
         public string[] GetAllInstruments()
         {
@@ -19,13 +19,13 @@ namespace TaskCSharp
 
         public SongInfo GetSongInfo()
         {
-            return new SongInfo(currentSong.Title,
+            return new SongInfo(_currentSong.Title,
                                 "",
-                                currentSong.Duration,
-                                currentSong.Tracks
+                                _currentSong.Duration,
+                                _currentSong.Tracks
                                             .Where(x => x.TrackID != 10)
                                             .ToList(),
-                                currentSong.Bpm);
+                                _currentSong.Bpm);
         }
 
         public void PlaySong()
@@ -33,7 +33,7 @@ namespace TaskCSharp
             Parser parser = new Parser();
             File1 file = new File1("file.mid");
             Song song = parser.Parse(file);
-            currentSong.Tracks.ForEach(x => {
+            _currentSong.Tracks.ForEach(x => {
                 ParsedTrack track = song.Tracks
                                         .Where(t => t.Channel == x.TrackID)
                                         .First();
@@ -44,13 +44,13 @@ namespace TaskCSharp
 
         public void UpdateTracks(List<string> names, List<InstrumentType> instruments)
         {
-            songsConfigurations.RemoveAt(songsConfigurations.FindIndex(x => x.SongHash == currentSong.SongHash));
-            TrackInfo[] tracks = currentSong.Tracks.ToArray();
+            _songsConfigurations.RemoveAt(_songsConfigurations.FindIndex(x => x.SongHash == _currentSong.SongHash));
+            TrackInfo[] tracks = _currentSong.Tracks.ToArray();
             for (int i = 0; i < names.Count; i++) {
                 tracks[i].TrackName = names[i];
                 tracks[i].Instrument = instruments[i];
             }
-            songsConfigurations.Add(currentSong);
+            _songsConfigurations.Add(_currentSong);
         }
     }
 }
