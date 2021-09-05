@@ -6,13 +6,13 @@ namespace TaskCSharp
     public class StorageFactory : IStorageFactory
     {
 
-        private readonly String CONFIG_FOLDER_NAME = ".dukemania1";
-        private readonly String USER_HOME_PATH = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-        private readonly String FILE_SEPARATOR = Path.DirectorySeparatorChar.ToString();
-        private readonly String CONFIGS_PATH;
-        private readonly Func<String, File1> configurationMappingFunction;
+        readonly String CONFIG_FOLDER_NAME = ".dukemania1";
+        readonly String USER_HOME_PATH = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        readonly String FILE_SEPARATOR = Path.DirectorySeparatorChar.ToString();
+        readonly String CONFIGS_PATH;
+        readonly Func<String, File1> configurationMappingFunction;
 
-        private readonly Func<String, File1> externalMappingFunction;
+        readonly Func<String, File1> externalMappingFunction;
 
         public StorageFactory() {
             CONFIGS_PATH = USER_HOME_PATH + FILE_SEPARATOR + CONFIG_FOLDER_NAME;

@@ -6,8 +6,8 @@ namespace TaskCSharp
 {
     public class SongSelectionWindowController : ISongSelectionWindowController
     {
-        private SongInfo _currentSong;
-        private List<SongInfo> _songsConfigurations;
+        SongInfo _currentSong;
+        List<SongInfo> _songsConfigurations;
 
         public string[] GetAllInstruments()
         {
