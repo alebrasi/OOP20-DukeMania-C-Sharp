@@ -43,9 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractNote.cs" />
+    <Compile Include="AbstractNote1.cs" />
     <Compile Include="ColumnLogic.cs" />
     <Compile Include="IColumnLogic.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="InstrumentType.cs" />
+    <Compile Include="KeyboardTrack.cs" />
+    <Compile Include="Note.cs" />
+    <Compile Include="ParsedTrack.cs" />
     <Compile Include="ScoreContext.cs" />
     <Compile Include="Columns.cs" />
     <Compile Include="FullCalculator.cs" />
@@ -54,10 +59,8 @@
     <Compile Include="GameUtilities.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="IGameUtilities.cs" />
-    <Compile Include="KeyboardTrack.cs" />
-    <Compile Include="Note.cs" />
-    <Compile Include="Song.cs" />
     <Compile Include="ITrackFilter.cs" />
+    <Compile Include="Song.cs" />
     <Compile Include="TrackFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

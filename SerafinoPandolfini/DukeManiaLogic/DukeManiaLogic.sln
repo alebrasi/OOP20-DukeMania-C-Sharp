@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DukeManiaLogic", "DukeMania
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{404B3D6F-3AF2-4B43-B03A-2927F1FC0258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDukeManiaLogic", "TestDukeManiaLogic\TestDukeManiaLogic.csproj", "{8ED72121-90C4-40BC-A2EE-AD46EDDA6DC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDukeManiaLogic", "TestDukeManiaLogic\TestDukeManiaLogic.csproj", "{8ED72121-90C4-40BC-A2EE-AD46EDDA6DC1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{71B81AD4-FAFD-4488-B395-730E4F9DEFF4} = {71B81AD4-FAFD-4488-B395-730E4F9DEFF4}
 	EndProjectSection

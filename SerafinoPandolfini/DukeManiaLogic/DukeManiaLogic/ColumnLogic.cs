@@ -21,6 +21,10 @@ namespace DukeManiaLogic
             ContextInit();
         }
 
+        public ColumnLogic()
+        {
+        }
+
         public int ColumnNumber => _columnNumber;
 
         public void SetColumnNumber(int columnNumber)

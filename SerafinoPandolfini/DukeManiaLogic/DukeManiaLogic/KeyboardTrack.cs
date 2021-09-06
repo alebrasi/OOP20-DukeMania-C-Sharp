@@ -1,19 +1,16 @@
-﻿
-using System;
+﻿using midi_task_Csharp;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace midi_task_Csharp
+namespace DukeManiaLogic
 {
 	public class KeyboardTrack : ParsedTrack
 	{
-		public Instrument Instrument { get; }
+		public InstrumentType Instrument { get; set; }
 		public Dictionary<int, long> NotesMaxDuration { get; }
 
-		public KeyboardTrack(Instrument instrument, List<Note> notes, int channel)
+		public KeyboardTrack(InstrumentType instrument, List<AbstractNote> notes, int channel) : base(notes, channel)
 		{
-			Notes = notes;
-			Channel = channel;
 			Instrument = instrument;
 			NotesMaxDuration = CalcMaxDuration();
 		}
@@ -22,5 +19,6 @@ namespace midi_task_Csharp
 		{
 			return Notes.GroupBy(n => n.Identifier).Select(n => n.OrderByDescending(d => d.Duration).FirstOrDefault()).ToDictionary(n => n.Identifier, n => n.Duration);
 		}
+
 	}
 }
