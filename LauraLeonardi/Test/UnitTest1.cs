@@ -6,15 +6,9 @@ using System.Linq;
 
 namespace Test
 {
-    [TestClass]
+	[TestClass]
     public class UnitTest1
-    {
-		[TestMethod]
-		public void TestIntutile()
-		{
-			Assert.IsTrue(1 == 1);
-
-		}
+	{
 
 		[TestMethod]
 		public void TestFactory()
@@ -105,8 +99,6 @@ namespace Test
 			kTracks.ForEach(t => Assert.IsTrue(t.NotesMaxDuration.ContainsKey(40)));
 			kTracks.ForEach(t => Assert.IsTrue(t.NotesMaxDuration.ContainsKey(41)));
 
-			
-			//Assert.IsTrue(1 == 2);
 		}
 
 		[TestMethod]
@@ -122,7 +114,23 @@ namespace Test
 			kTracks.ForEach(t => t.Notes.ForEach(n => Assert.IsInstanceOfType(n, typeof(Note))));
 			pTrack.Notes.ForEach(n => Assert.IsInstanceOfType(n, typeof(PercussionNote)));
 			pTrack.Notes.ForEach(n => Assert.IsNotNull(((PercussionNote)n).Instrument));
+			
+			//ottengo due note campione
+			Note a4 = (Note)kTracks[0].Notes[1];
+			PercussionNote snare = (PercussionNote)pTrack.Notes[0];
 
+			// test su Note e PercussionNote
+			Assert.AreEqual(a4.Identifier, 69);
+			Assert.AreEqual(a4.Duration, 3);
+			Assert.AreEqual(a4.StartTime, 2);
+			Assert.AreEqual(a4.Frequency, 440);
+			Assert.AreEqual(a4.GetItem(), 69);
+			Assert.AreEqual(snare.Identifier, 40);
+			Assert.AreEqual(snare.Duration, 3);
+			Assert.AreEqual(snare.StartTime, 1);
+			Assert.AreEqual(snare.Instrument, Percussion.ELECTRIC_SNARE);
+			Assert.AreEqual(snare.GetItem(), Percussion.ELECTRIC_SNARE);
+			
 		}
 	}
-	}
+}

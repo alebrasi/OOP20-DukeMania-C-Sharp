@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace midi_task_Csharp
+﻿namespace midi_task_Csharp
 {
 	public enum Percussion
 	{
