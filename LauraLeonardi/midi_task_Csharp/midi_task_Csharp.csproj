@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractNote.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="FactoryConfigurator.cs" />
     <Compile Include="InstrumentType.cs" />
     <Compile Include="Factory.cs" />
@@ -51,7 +52,6 @@
     <Compile Include="PercussionFactory.cs" />
     <Compile Include="PercussionNote.cs" />
     <Compile Include="PercussionTrack.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Song.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
