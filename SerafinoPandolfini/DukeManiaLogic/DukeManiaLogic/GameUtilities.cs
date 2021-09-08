@@ -6,19 +6,14 @@ namespace DukeManiaLogic
 {
     public class GameUtilities : IGameUtilities
     {
-        private List<DifficultyLevel> getDifficulties()
-        {
-            return Enum.GetValues(typeof(DifficultyLevel))
-                        .Cast<DifficultyLevel>()
-                        .OrderBy(x => x.GetNumericValue())
-                        .ToList();
-        }
-            public Dictionary<KeyboardTrack, DifficultyLevel> generateTracksDifficulty(List<KeyboardTrack> tracks)
+        private List<DifficultyLevel> GetDifficulties() => DifficultyLevel.GetValues().ToList();
+
+        public Dictionary<KeyboardTrack, DifficultyLevel> GenerateTracksDifficulty(List<KeyboardTrack> tracks)
         {
             return tracks.ToDictionary(x => x, x =>
             {
-                int numberOfDifficulties = DifficultyLevel.getValues().Count() - 1;
-                return getDifficulties()
+                int numberOfDifficulties = DifficultyLevel.GetValues().Count() - 1;
+                return GetDifficulties()
                 .Where(y => x.Notes.Count() <= TrackFilter.MAX_NOTE / numberOfDifficulties * y.GetNumericValue())
                 .DefaultIfEmpty(DifficultyLevel.UNKNOWN)
                 .First();

@@ -10,7 +10,7 @@ public sealed class DifficultyLevel
     public static readonly DifficultyLevel DIFFICULT = new DifficultyLevel("Difficult",4);
     public static readonly DifficultyLevel VERY_DIFFICULT = new DifficultyLevel("Very Difficult",5);
 
-    public static IEnumerable<DifficultyLevel> getValues()
+    public static IEnumerable<DifficultyLevel> GetValues()
     {
         yield return DifficultyLevel.UNKNOWN;
         yield return DifficultyLevel.VERY_EASY;

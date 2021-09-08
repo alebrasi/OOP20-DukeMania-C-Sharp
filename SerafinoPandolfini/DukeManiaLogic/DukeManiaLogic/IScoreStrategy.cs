@@ -8,6 +8,9 @@ namespace DukeManiaLogic
 {
     public interface IScoreStrategy
     {
+        /// <summary>
+        /// use the current strategy to calculae the score
+        /// </summary>
         int ScoreCalculation(Columns column, long start, long end, NoteRange currentRange, int columnNumber);
     }
 }

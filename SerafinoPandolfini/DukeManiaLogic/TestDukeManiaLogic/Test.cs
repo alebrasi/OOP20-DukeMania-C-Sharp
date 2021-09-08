@@ -77,7 +77,7 @@ namespace TestDukeManiaLogic
             //test special case: track with more notes than MAX_NOTE
             testTracksDiff.Add(new KeyboardTrack(InstrumentType.ACCORDION,
                 createNotes(TrackFilter.MAX_NOTE + 1), 0));
-            Dictionary<KeyboardTrack, DifficultyLevel> trackmap = this._gameUtilities.generateTracksDifficulty(testTracksDiff);
+            Dictionary<KeyboardTrack, DifficultyLevel> trackmap = this._gameUtilities.GenerateTracksDifficulty(testTracksDiff);
             Assert.AreEqual(trackmap.GetValueOrDefault(testTracksDiff[0]), DifficultyLevel.VERY_EASY);
             Assert.AreEqual(trackmap.GetValueOrDefault(testTracksDiff[1]), DifficultyLevel.EASY);
             Assert.AreEqual(trackmap.GetValueOrDefault(testTracksDiff[2]), DifficultyLevel.NORMAL);

@@ -8,8 +8,6 @@ namespace DukeManiaLogic
 
         const int COLUMN_MAX_CAP = 8;
         const int COLUMN_MIN_CAP = 4;
-        const int MAX_HEIGHT = 4;
-        const int THREAD_SLEEP_TIME = 5;
         private int _columnNumber;
         private List<NoteRange> _noteRanges;
         private ScoreContext _context;
@@ -32,15 +30,19 @@ namespace DukeManiaLogic
             this._columnNumber = columnNumber <= COLUMN_MAX_CAP && columnNumber >= COLUMN_MIN_CAP ? columnNumber : COLUMN_MIN_CAP;
         }
 
+
+
         public void AddNoteRanges(Columns column, long start, long end)
         {
             this._noteRanges.Add(new NoteRange(column, start, end));
         }
 
+
         public void ContextInit()
         {
             this._context = new ScoreContext(new FullCalculator());
         }
+
 
         public int verifyNote(Columns column, long start, long end)
         {

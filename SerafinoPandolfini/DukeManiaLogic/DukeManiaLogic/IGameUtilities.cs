@@ -8,6 +8,9 @@ namespace DukeManiaLogic
 {
     interface IGameUtilities
     {
-        Dictionary<KeyboardTrack, DifficultyLevel> generateTracksDifficulty(List<KeyboardTrack> tracks);
+        /// <summary>
+        /// give a difficulty level at all playable tracks
+        /// </summary>
+        Dictionary<KeyboardTrack, DifficultyLevel> GenerateTracksDifficulty(List<KeyboardTrack> tracks);
     }
 }
