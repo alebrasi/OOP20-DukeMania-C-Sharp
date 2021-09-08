@@ -29,6 +29,9 @@ namespace taskcsharp
             return env.CreateBufferManager(buff);
         }
 
+        /// <summary>
+        /// synth constructor, automatically creates all the note buffer
+        /// </summary>
         public KeyboardSynth(Enveloper env, WaveTable[] waves, Func<long, float> nlfo, Func<long, float> vlfo, double[] offsets, List<KeyValuePair<int, long>> freqs)
         {
             int numA4 = 69;
@@ -40,16 +43,25 @@ namespace taskcsharp
             });
         }
 
+        /// <summary>
+        /// tells how many notes are currently playing
+        /// </summary>
         public int CheckKeys()
         {
             return keys.Values.Where(x => x.HasNext()).Count();
         }
 
+        /// <summary>
+        /// get a single sample from all the playing notes 
+        /// </summary>
         public float SetSample()
         {
             return keys.Values.Where(x => x.HasNext()).Select(x => x.Next()).Count();
         }
 
+        /// <summary>
+        /// play a note for a specified time
+        /// </summary>
         public void PlayTimedNote(int identifier, long microseconds)
         {
             keys[identifier].Refresh(microseconds / 1000);

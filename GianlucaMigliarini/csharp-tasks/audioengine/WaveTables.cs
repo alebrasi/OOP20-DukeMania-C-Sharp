@@ -8,11 +8,6 @@ namespace taskcsharp
 {
     public sealed class WaveTable
     {
-        private WaveTable()
-        {
-
-        }
-
         private static Random _rnd = new Random();
         public static readonly WaveTable SINE = new WaveTable((i, period) => (float) (Math.Sin(2.0 * Math.PI * i / period) * Settings.MAX_VOLUME));
         public static readonly WaveTable TRIANGLE = new WaveTable((i, period) => (float) (2 / Math.PI * Math.Asin(Math.Sin(2 * Math.PI * i / period)) * Settings.MAX_VOLUME));
@@ -31,7 +26,7 @@ namespace taskcsharp
 
         private readonly float[] _wave = new float[(int) Settings.WAVETABLE_SIZE];
 
-        public WaveTable(Func<float, float, float> mapper)
+        private WaveTable(Func<float, float, float> mapper)
         {
             float initFreq = (float)(1d / (Settings.WAVETABLE_SIZE / Settings.SAMPLE_RATE));
             float period = Settings.SAMPLE_RATE / initFreq;
@@ -42,11 +37,17 @@ namespace taskcsharp
             }
         }
 
+        /// <summary>
+        /// get the wavetable as a float array
+        /// </summary>
         public float[] GetWave()
         {
             return _wave;
         }
 
+        /// <summary>
+        /// get the wavetable at a specified position
+        /// </summary>
         public float GetAt(int pos)
         {
             return _wave[pos];

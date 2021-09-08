@@ -47,6 +47,9 @@ namespace taskcsharp
             _volumeLFO = lfo;
         }
 
+        /// <summary>
+        /// build the synthesizer
+        /// </summary>
         public KeyboardSynth Build(List<KeyValuePair<int, long>> freqs)
         {
             if (_env == null || _waves == null || _offsets == null) {

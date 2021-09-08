@@ -21,6 +21,9 @@ namespace taskcsharp
             SQUARE
         }
 
+        /// <summary>
+        /// create an lfo function from general arguments
+        /// </summary>
         public static Func<long, float> General(Types type, float[] args, int duration)
         {
             switch (type)
@@ -33,6 +36,9 @@ namespace taskcsharp
             }
         }
 
+        /// <summary>
+        /// create a traight line lfo
+        /// </summary>
         public static Func<long, float> StraightLineLFO(float targetMult, int duration)
         {
             float sampleDuration = (float) duration * Settings.SAMPLESPERMILLI;
@@ -40,12 +46,18 @@ namespace taskcsharp
             return x => 1 + (step * (x % sampleDuration));
         }
 
+        /// <summary>
+        /// create a square lfo, the frequency will shift from multMax to MultMin in duration ms
+        /// </summary>
         public static Func<long, float> SquareLFO(float multMax, float multMin, int duration)
         {
             float sampleDuration = (float) duration * Settings.SAMPLESPERMILLI;
             return x => x % sampleDuration < sampleDuration / 2 ? multMax : multMin;
         }
 
+        /// <summary>
+        /// create an interval lfo, each array position will define a frequency / volume multiplier, the position is changed every duration ms
+        /// </summary>
         public static Func<long, float> BuildIntervals(float[] multipliers, int duration)
         {
             int sampleDuration = (int) (duration * Settings.SAMPLESPERMILLI);
@@ -53,6 +65,9 @@ namespace taskcsharp
             return x => multipliers[(int) ((x % sampleDuration) / single)];
         }
 
+        /// <summary>
+        /// create an lfo with the shape of a sine wave
+        /// </summary>
         public static Func<long, float> SineLFO(float multMax, float multMin, int duration)
         {
             float sampleDuration = (float) duration * Settings.SAMPLESPERMILLI;

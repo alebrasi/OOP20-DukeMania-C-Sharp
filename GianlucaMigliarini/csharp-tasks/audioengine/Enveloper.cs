@@ -14,6 +14,9 @@ namespace taskcsharp
         private readonly float _atkVol;
         private readonly float _step1;
 
+        /// <summary>
+        /// create an enveloper
+        /// </summary>
         public Enveloper(long atk, float atkVol, long rel)
         {
             _atkVol = atkVol;
@@ -22,6 +25,9 @@ namespace taskcsharp
             _step1 = (atkVol / atk) / Settings.SAMPLESPERMILLI;
         }
 
+        /// <summary>
+        /// get the enveloper attack and release time
+        /// </summary>
         public long GetTime()
         {
             return (long) ((_atk + _rel) * Settings.SAMPLESPERMILLI);
@@ -98,6 +104,9 @@ namespace taskcsharp
             }
         }
 
+        /// <summary>
+        /// create a bufferManager from an enveloper
+        /// </summary>
         public IBufferManager CreateBufferManager(double [] buffer)
         {
             return new BufferManager(buffer, this);
